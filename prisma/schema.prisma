@@ -39,14 +39,12 @@ model Session {
 
 model User {
   id            String    @id @default(cuid())
-  name          String?   
+  name          String? 
   email         String?   @unique
   emailVerified DateTime?
   image         String?
   accounts      Account[]
   sessions      Session[]
-  productsAdded Product[]
-
 }
 
 model VerificationToken {
@@ -64,7 +62,5 @@ model Product {
   enteringTime  DateTime @default(now())
   image         String
   productSerial String   @unique @default(uuid())
-  price Int 
-  addedBY User @relation(fields: [authorEmail],references: [email])
-  authorEmail String
+  price         Int
 }

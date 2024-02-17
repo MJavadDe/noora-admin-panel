@@ -27,15 +27,9 @@ export async function POST(request: NextRequest) {
             quantity: body.quantity,
             image: body.image
         }
+        
     })
 
     return NextResponse.json(newProduct)    
 
-}
-
-
-export async function DELETE(request: NextRequest) {
-    const deletedProducts = await prisma.product.deleteMany();
-
-    return NextResponse.json(deletedProducts)
 }
