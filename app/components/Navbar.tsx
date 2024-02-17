@@ -12,7 +12,7 @@ async function Navbar() {
 
   return (
     
-      <nav className="navbar p-10 shadow-lg">
+      <nav className="navbar p-10 shadow-lg bg-neutral">
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">NOORA</a>
         </div>
